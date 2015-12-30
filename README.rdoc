@@ -23,6 +23,8 @@ Things you may want to cover:
 
 * ...
 
+RAILS_ENV=production bundle exec rake assets:precompile
+
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
