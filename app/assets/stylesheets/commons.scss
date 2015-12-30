@@ -1,0 +1,364 @@
+@font-face {
+    font-family: PiecesOfEight;
+    src: url(PiecesOfEight.ttf);
+}
+
+.piecesOfEight-white{
+  color: white;
+}
+.piecesOfEight-black{
+  color: black;
+}
+.piecesOfEight-space{
+  letter-spacing: 2px;  
+}
+
+.piecesOfEight{
+  font-family: PiecesOfEight;
+}
+
+.piecesOfEight-price{
+   font-size: 30px;
+}
+
+.piecesOfEight-xs{
+  font-size: 20px;
+}
+.piecesOfEight-md{
+  font-size: 40px;
+}
+
+.piecesOfEight-big{
+  font-size: 60px;
+}
+
+.piecesOfEight-xbig{
+  font-size: 80px;
+}
+.piecesOfEight-center{
+  text-align: center;
+}
+
+.full-screen-container-fluid {
+    
+    height: 100%;
+    margin: 0;
+     min-height: 100%; 
+}
+
+.column-no-padding{
+    //min-height: 1px;
+    //padding-left: 0px !important;
+    //padding-right: 0px !important;
+    //position: relative;
+}
+
+
+
+html{
+ // height: 100%;
+  min-height: 100%;
+
+}
+
+body { 
+  //padding-top: 70px; 
+}
+
+
+.navbar-brand{
+  font-size: 50px !important;
+}
+
+
+.centered-image{
+  margin: auto;
+}
+
+.border-blue{
+    border: 1px solid blue;
+    
+} 
+
+.border-red{
+    border: 1px solid red;  
+
+    
+} 
+
+.border-yellow{
+    border: 1px solid yellow;  
+} 
+
+
+
+.border-pink{
+    border: 1px solid pink;  
+} 
+
+.full-div{
+   height: 90%;
+   background-color: blue;
+} 
+section {
+  padding-top: 70px !important;
+  
+  padding-bottom: 0px !important;
+  
+}
+
+.content-section{
+  
+}
+
+#section-footer{
+
+    
+    width: 100%;
+     height: 10%;
+   
+}
+
+
+.background-dark{
+  //background-color: #474847;
+  background: rgba(71, 72, 71, 0.9);
+}
+
+
+.pagetitle {
+    color: #B0C4DE;
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: #B0C4DE;
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 40px;
+    margin-bottom: 30px;
+    margin-top: -60px;
+    
+}
+
+.spaced-form-group{
+  padding-bottom: 10px;
+}
+
+
+
+@media (max-width: 768px ) { 
+  .content-section{
+  background-color: red;
+  height: auto;
+  min-height: auto;
+  }
+} 
+
+.panel {
+  background-color: none !important;
+  border: none !important;
+}
+
+.panel-default {
+    background-color: none !important;
+    border-color: none !important;
+    border: none !important;
+}
+
+
+.section-separator{
+  height: 500px;
+  text-align: center;
+}
+.section-separator-1{
+  background-color: #5B6073;//#00416A;
+}
+.section-separator .message{
+height: 100%;
+
+}
+
+
+/** cards **/
+
+.card {
+    background-color: #000;
+    border: 1px solid silver;
+    border-radius: 0.25rem;
+    display: block;
+    margin-bottom: 0.75rem;
+    position: relative;
+    text-align: center;
+}
+
+.card-img{
+  //opacity: 0.9;
+  //  filter: alpha(opacity=90); /* For IE8 and earlier */
+
+}
+
+.card-with-opacity{
+ background: rgba(0, 54, 54, 0.5);
+
+}
+.card-with-opacity-full{
+ background: rgba(0, 0, 0, 0);
+
+}
+
+.card-with-no-border{
+  border: none;
+}
+
+.card-img-top {
+    border-radius: 0.25rem 0.25rem 0 0;
+    vertical-align: middle;
+}
+
+.card-block {
+    padding: 1.25rem;
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+}
+.card-text  {
+    color: white;
+}
+
+.card-img-overlay {
+    bottom: 0;
+    left: 0;
+    padding: 1.25rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.card-title {
+    margin-bottom: 0.75rem;
+}
+/* cards */
+
+/* card flip */
+
+.flip {
+  -webkit-perspective: 800;
+  -ms-perspective: 800;
+  -moz-perspective: 800;
+  -o-perspective: 800;
+   
+   position: relative;
+   //margin: 50px auto;
+}
+.flip .flip-card.flipped {
+  transform:rotatey(-180deg);
+  -ms-transform:rotatey(-180deg); /* IE 9 */
+  -moz-transform:rotatey(-180deg); /* Firefox */
+  -webkit-transform:rotatey(-180deg); /* Safari and Chrome */
+  -o-transform:rotatey(-180deg); /* Opera */
+}
+.flip .flip-card {
+  width: 100%;
+   height: 120%;
+  
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: 0.5s;
+  -moz-transform-style: preserve-3d;
+  -moz-transition: 0.5s;
+  -ms-transform-style: preserve-3d;
+  -ms-transition: 0.5s;
+  -o-transform-style: preserve-3d;
+  -o-transition: 0.5s;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+.flip .flip-card .face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  font-family: Georgia;
+  font-size: 3em;
+  text-align: center;
+  //line-height: 200px;
+
+  backface-visibility: hidden;  /* W3C */
+  -webkit-backface-visibility: hidden; /* Safari & Chrome */
+  -moz-backface-visibility: hidden; /* Firefox */
+  -ms-backface-visibility: hidden; /* Internet Explorer */
+  -o-backface-visibility: hidden; /* Opera */
+
+}
+.flip .flip-card .front {
+  position: absolute;
+  z-index: 1;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+.flip .flip-card .back {
+    background: blue;
+    background: white;
+    color: black;
+    cursor: pointer;
+    margin-top: 210px;
+  transform:rotatey(-180deg);
+  -ms-transform:rotatey(-180deg); /* IE 9 */
+  -moz-transform:rotatey(-180deg); /* Firefox */
+  -webkit-transform:rotatey(-180deg); /* Safari and Chrome */
+  -o-transform:rotatey(-180deg); /* Opera */
+
+}
+
+/* card flip */
+
+/* carousel */
+.owl-carousel {
+   width: 70% !important;
+   margin: auto;
+}
+
+
+    
+#owl-demo .item{
+  display: block;
+  padding: 30px 0px;
+  margin: 5px;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+    
+
+}
+.owl-theme .owl-controls .owl-buttons div {
+  padding: 5px 9px;
+}
+ 
+.owl-theme .owl-buttons i{
+  margin-top: 2px;
+}
+ 
+//To move navigation buttons outside use these settings:
+ 
+.owl-theme .owl-controls .owl-buttons div {
+  position: absolute;
+}
+ 
+.owl-theme .owl-controls .owl-buttons .owl-prev{
+  left: -45px;
+  top: 55px; 
+}
+ 
+.owl-theme .owl-controls .owl-buttons .owl-next{
+  right: -45px;
+  top: 55px;
+}
+
+/* carousel */

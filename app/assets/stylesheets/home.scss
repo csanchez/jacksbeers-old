@@ -1,0 +1,185 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.menu-bar{
+
+  background-color:  #fcfcfc;
+}
+.logo {
+    background-color: #fcfcfc;
+    //border-bottom: 5px solid #00e0e0;
+    height: auto;
+    padding: 40px 0 10px;
+    text-align: center;
+    width: 100%;
+}
+
+a img {
+    border: medium none;
+}
+img {
+    vertical-align: top;
+}
+
+.logo a img{
+  margin: auto;
+}
+.icons ul{
+    margin: auto;
+    display: block; text-align:center; 
+}
+.icons ul li {
+    display: inline-block;
+    //padding: 0 1em 0 0;
+    margin: auto;
+}
+
+#main-section{
+    //background-color: red;
+    height: 90%;
+}
+
+
+#home-section{
+   /* background-image: url("pirates-wallpaper-2.1.jpg");
+   // background-size:100% auto;
+    background-repeat: no-repeat;
+   // height: 100%;*/
+
+
+   //background:  url("pirates-wallpaper-2-md.png") no-repeat left bottom fixed; 
+   background:  url("pirates-wallpaper-2-sm.png") no-repeat left bottom fixed; 
+   //background:  url("pirates-wallpaper-2-bg.png") no-repeat left bottom fixed; 
+    background-size: 100% auto;
+
+   // -webkit-background-size: cover;
+   // -moz-background-size: cover;
+   // -o-background-size: cover;
+   // background-size: cover;
+}
+
+#features-section{
+   /* background-image: url("pirates-wallpaper-2.1.jpg");
+   // background-size:100% auto;
+    background-repeat: no-repeat;
+   // height: 100%;*/
+
+
+   background:  url("pirates-wallpaper-1.jpg") no-repeat left bottom fixed; 
+   
+    background-size: 100% auto;
+
+   // -webkit-background-size: cover;
+   // -moz-background-size: cover;
+   // -o-background-size: cover;
+   // background-size: cover;
+}
+
+#services-section{
+    /* background-image: url("pirates-wallpaper-2.1.jpg");
+   // background-size:100% auto;
+    background-repeat: no-repeat;
+   // height: 100%;*/
+
+
+   background:  url("pirates-wallpaper-3.1.jpg") no-repeat left bottom fixed; 
+   
+    background-size: 100% auto;
+
+   // -webkit-background-size: cover;
+   // -moz-background-size: cover;
+   // -o-background-size: cover;
+   // background-size: cover;
+}
+
+#contact-section{
+  background:  url("pirates-wallpaper-4.1.jpg") no-repeat left bottom fixed; 
+   
+    background-size: 100% auto;
+}
+
+
+
+
+/*  Contact section*/
+
+
+.note {
+    margin-bottom: 40px;
+     margin-left: 10px;
+    margin-right: 10px;
+}
+
+#contact-info{
+
+     height: 100%;
+    min-height: 100%;
+    padding: 30px 25px;
+}
+
+
+#contact-info dt{
+    color: #e8554e;
+    font-family: "brandon-grotesque",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#contact-info dd {
+    margin-bottom: 15px;
+}
+
+
+/*  Estilos para el carousel*/
+
+
+
+    #owl-demo .item{
+      margin: 3px;
+    }
+    #owl-demo .item img{
+      display: block;
+      width: 200px;
+      height: auto;
+    }
+
+
+
+
+
+#carousel-beers {
+    margin: auto;
+    width: 100%;
+}
+
+.carousel-beers-inner {
+    margin: auto;
+    width: 80% ;
+}
+
+
+.image-container{
+  //border: 2px solid white;
+  width: 200px;
+  margin: auto;
+}
+
+.image-container img{
+  width: 100%;
+  margin: auto;
+}
+
+.image-beer-carousel{
+   width: 70%;
+}
+
+
+
+
+
+
+
+
+

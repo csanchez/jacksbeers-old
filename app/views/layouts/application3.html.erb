@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jacksbeers</title>
+  
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css"
+    rel="stylesheet" type="text/css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
+</head>
+
+
+<body>
+	<nav class="navbar navbar-default">
+		  <div class="container-fluid ">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>                        
+		      </button>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav">
+		        <li role="presentation" class="active">
+					              <a id="home-jump"  href="#">Inicio</a>
+					            </li>
+					            <li>
+					              <a id="services-jump" href="#">Productos</a>
+					            </li>
+					            <li>
+					              <a href="#">Blog</a>
+					            </li>
+					            <li>
+					              <a href="#">Galeria</a>
+					            </li>
+					            <li>
+					              <a href="#">Noticias</a>
+					            </li>
+					            <li>
+					              <a href="#">Acerca de Jack</a>
+					            </li>
+					            <li>
+					              <a href="#">Contacto</a>
+					            </li>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="#"><span class="icon fa fa-beer "></span> Comprar</a></li>
+		        <li><a href="#"><span class="icon fa fa-sign-in "></span> Entrar</a></li>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>	
+	<section id="main-section"  class="  ">
+	    
+
+
+
+      <div class="container-fluid ">
+        <div class="row  ">
+          <div class="col-md-2   menu-bar">
+            <div class="logo">
+            	<a href="index.html">
+					<%= image_tag "logo.png" , class:"img-responsive"%>
+				</a>
+				<br>
+				<p>Lorem impsum dolor persecutor</p>
+            </div>
+            <div class="icons">
+              <ul class="nav  ">
+	              <li>
+	                <a class=" fa fa-facebook fa-2x" href="#">
+	                      </a>
+	              </li>
+	              <li>
+	                <a class=" fa fa-twitter fa-2x" href="#">
+	                      </a>
+	              </li>
+	              <li>
+	                <a class=" fa fa-instagram fa-2x" href="#">	
+	                      </a>
+	              </li>
+	            </ul>
+            </div>
+			<div class="">
+	          <ul class="nav nav-pills nav-stacked">
+	            <li role="presentation" class="active">
+	              <a id="home-jump"  href="#">Inicio</a>
+	            </li>
+	            <li>
+	              <a id="services-jump" href="#">Productos</a>
+	            </li>
+	            <li>
+	              <a href="#">Blog</a>
+	            </li>
+	            <li>
+	              <a href="#">Galeria</a>
+	            </li>
+	            <li>
+	              <a href="#">Noticias</a>
+	            </li>
+	            <li>
+	              <a href="#">Acerca de Jack</a>
+	            </li>
+	            <li>
+	              <a href="#">Contacto</a>
+	            </li>
+	          </ul>
+	        </div>
+            
+          </div>
+          <div class="col-md-10  content-section  ">
+          	
+            
+
+          	<%= yield %>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+	</section>
+    <!--headers -->
+
+
+    <!-- Content -->
+    
+   <!-- Content -->
+
+
+   
+    
+
+</body>
+</html>
+
