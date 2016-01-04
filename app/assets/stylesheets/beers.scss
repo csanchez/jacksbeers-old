@@ -1,0 +1,41 @@
+// Place all the styles related to the beers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.navbar2{
+	padding-top: 100px;
+}
+
+
+.beer-image-container{
+	margin: auto;
+}
+.beer-image-container:hover  button{
+  //display: block;
+  //opacity: 0.5;
+  //  filter: alpha(opacity=50); /* For IE8 and earlier */
+  }
+
+.beer-image-container button {
+
+    position:absolute;
+	right:0;
+	top:0px;
+	z-index:1;
+
+ 	background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:copy;
+    overflow: hidden;
+    outline:none;
+}
+
+.beer-image-container button{
+	
+  //width:50%;
+}
+
+.beer-image-container button:hover {
+    color: red;
+}

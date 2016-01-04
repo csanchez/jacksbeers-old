@@ -1,0 +1,51 @@
+<section class='content-section '  id="beers-section">
+  <div class="container-fluid full-screen-container-fluid red-border ">
+    <% @beers.in_groups_of(4, false).each do |group| %>
+    <div class='row'>
+      <% group.each do |beer| %>
+      <div class='col-xs-6 col-sm-4 col-md-3'>
+        <div class="item">
+          <div class="card card-with-opacity-full card-with-no-border">
+            <div class="image-container beer-image-container">
+              <%= image_tag "beer-1.png", alt:"Card image cap", class:"img-responsive" %>
+            </div>
+
+            <div class="card-block">
+              <div class="">
+                <h5 class="letter-white piecesOfEight piecesOfEight-price"> 
+                  <button type="button" class=" btn btn-warning btn-sm piecesOfEight piecesOfEight-xs piecesOfEight-space" >
+                  <i class="fa fa-plus-circle "></i>agregar
+                  
+              </button>
+                 <h4><%= link_to beer.name, beer_path(beer.permalink) %></h4><small>&nbsp;<%= beer.short_description %></small></h5>
+                 <p><b>Price:</b> <%= number_to_currency beer.price %></p>
+               </div>
+
+
+             </div>
+           </div>
+         </div>
+       </div>
+       <% end %>
+     </div>
+     <% end %>
+
+
+
+
+
+
+   </div>
+ </section>
+
+
+
+
+
+
+
+
+
+
+
+

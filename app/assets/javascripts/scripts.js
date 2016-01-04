@@ -61,6 +61,20 @@ $( document ).ready(function() {
  
   });
 
+
+  /** flip cards**/
+  $(".manual-flipped-car").click(function(){
+  	console.log($(this))
+  	
+  	if( $(this).hasClass('hover') ){
+            $(this).removeClass('hover');
+        } else {
+            $(this).addClass('hover');
+        }
+
+  });
+  $("#card-flip").flip();
+
 });
 
 
