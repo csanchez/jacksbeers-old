@@ -1,6 +1,31 @@
 $( document ).ready(function() {
 
+
 	var scrollVelocity=4500;
+
+  if(window.innerWidth >=1200){
+    $("#presentation-image").html("<img class='img-responsive centered-image' src='/assets/pergamino-lg-1.png' alt='Card image cap' style='width: 100%; '>")
+  }else{
+    if(window.innerWidth > 768 && window.innerWidth < 1200 ){
+      $("#presentation-image").html("<img class='img-responsive centered-image' src='/assets/pergamino-md-1.png' alt='Card image cap' startwidth='957' style='width: 100%; '>")
+    }else{
+      $("#presentation-image").html("<img class='img-responsive centered-image' src='/assets/pergamino-xs-1.png' alt='Card image cap' style='width: 100%; '>")   
+    }
+    
+  }
+
+  $( window ).resize(function() {
+    if(window.innerWidth >=1200){
+      $("#presentation-image").html("<img class='img-responsive centered-image' src='/assets/pergamino-lg-1.png' alt='Card image cap' style='width: 100%; '>")
+    }else{
+      if(window.innerWidth > 768 && window.innerWidth < 1200 ){
+        $("#presentation-image").html("<img class='img-responsive centered-image' src='/assets/pergamino-md-1.png' alt='Card image cap' style='width: 100%; '>")
+      }else{
+        $("#presentation-image").html("<img class='img-responsive centered-image' src='/assets/pergamino-xs-1.png' alt='Card image cap' style='width: 100%; '>")   
+      }
+      
+    }
+  });
 	
 	$("#services-jump").click(function() {
 	    $('html, body').animate({
@@ -74,6 +99,9 @@ $( document ).ready(function() {
 
   });
   $("#card-flip").flip();
+
+   $('.image-container').imagefit();
+
 
 });
 

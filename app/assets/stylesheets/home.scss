@@ -1,45 +1,37 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.menu-bar{
 
-  background-color:  #fcfcfc;
-}
-.logo {
-    background-color: #fcfcfc;
-    //border-bottom: 5px solid #00e0e0;
-    height: auto;
-    padding: 40px 0 10px;
-    text-align: center;
-    width: 100%;
+.content-collumn {
+  overflow: scroll;
 }
 
-a img {
-    border: medium none;
-}
-img {
-    vertical-align: top;
-}
-
-.logo a img{
-  margin: auto;
-}
-.icons ul{
-    margin: auto;
-    display: block; text-align:center; 
-}
-.icons ul li {
-    display: inline-block;
-    //padding: 0 1em 0 0;
-    margin: auto;
+.presentation-container{
+  //background-color: yellow;
+  //height:60%;
+  //height: 300px;
+  height: auto;
+  
+  
 }
 
-#main-section{
-    //background-color: red;
-    height: 90%;
+@media (max-width: 768px ) { 
+  .content-section{
+  background-color: red;
+  height: auto;
+  min-height: auto;
+  }
+} 
+
+#row-content{
+  //background:  url("pirates-wallpaper-2-md.png") no-repeat left bottom fixed; 
+   //background:  url(image-path("pirates-wallpaper-2-sm.png")) no-repeat left bottom fixed; 
+   //background:  url("pirates-wallpaper-2-bg.png") no-repeat left bottom fixed; 
+   background:  url(image-path("pirates-wallpaper-3.1.jpg")) no-repeat left bottom fixed; 
+    // background-size: 100% auto;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
-
-
 #home-section{
    /* background-image: url("pirates-wallpaper-2.1.jpg");
    // background-size:100% auto;
@@ -47,17 +39,10 @@ img {
    // height: 100%;*/
 
 
-   //background:  url("pirates-wallpaper-2-md.png") no-repeat left bottom fixed; 
-   //background:  url(image-path("pirates-wallpaper-2-sm.png")) no-repeat left bottom fixed; 
-   //background:  url("pirates-wallpaper-2-bg.png") no-repeat left bottom fixed; 
-   background:  url(image-path("pirates-wallpaper-3.1.jpg")) no-repeat left bottom fixed; 
- // background-size: 100% auto;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+   
 }
+
+
 
 #features-section{
    /* background-image: url("pirates-wallpaper-2.1.jpg");
@@ -162,13 +147,15 @@ img {
 
 
 .image-container{
-  width: 200px;
-  margin: auto;
+  //width: 200px;
+  //margin: auto;
+
 }
 
 .image-container img{
-  width: 100%;
-  margin: auto;
+ // width: 100%;
+ // margin: auto;
+
 }
 
 .image-beer-carousel{

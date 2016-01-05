@@ -1,117 +1,31 @@
 <section class='content-section '  id="home-section">
 	<div class="container-fluid full-screen-container-fluid  ">
 		<div class="row full-screen-container-fluid  ">
-			<div class="col-md-12 full-screen-container-fluid  ">
-				<div class="row full-screen-container-fluid  ">
-					<div class="container-fluid full-screen-container-fluid  ">
-						<div class="row full-screen-container-fluid  " >
-							<div class=" col-xs-12 col-sm-12 col-md-6 full-screen-container-fluid  ">
-								<%= render partial: "main_front_card" %>
-						</div>
-						<div class="col-xs-12  col-sm-12 col-md-6 full-screen-container-fluid  ">
-							<div class="row">
-								<div class="col-xs-12  col-sm-12  col-md-12">
-									<div class="card card-with-opacity-full card-with-no-border">
-										<%= image_tag "jacks-beers-front-2.jpg",class: "img-responsive card-img img-rounded-corners img-rounded-corners centered-image" , alt:"Card image cap"  %>
-										<div class="card-img-overlay home-card-img-overlay" >
-											<p class="card-text">
-												<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Ver video</button>
-											</div>
-										</div>
-
-
-
-
-
-								<!--
-								<div class="card card-with-opacity">
-					  				  < image_tag "portfolio-thumbnail-14.3.jpg", {"class" => "img-responsive centered-image card-img-top", "data-toggle" => "modal", "data-target" =>"#myModal"}  %>
-									  
-									  <div class="card-block">
-									    
-									    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Ver video</button>
-									  </div>
-									</div>
-
-
-
-	                      			<div class="panel panel-default no-border-panel "> 
-									    	< image_tag "portfolio-thumbnail-14.3.jpg", {"class" => "img-responsive centered-image", "data-toggle" => "modal", "data-target" =>"#myModal"} >
-									</div>
-								-->
-								<!-- Modal -->
-								<div id="myModal" class="modal fade" role="dialog">
-									<div class="modal-dialog">
-
-										<!-- Modal content-->
-										<div class="modal-content">
-											<div class="modal-header">
-												<button type="button" class="close" data-dismiss="modal">&times;</button>
-												<h4 class="modal-title">Modal Header</h4>
-											</div>
-											<div class="modal-body">
-												<div class="">
-													<iframe  class="embed-responsive-item" width="100%" height="350" src="https://www.youtube.com/watch?v=L7p85x9VIwo" frameborder="0" allowfullscreen></iframe>
-												</div>
-											</div>
-											<div class="modal-footer">
-												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-											</div>
-										</div>
-
-									</div>
-								</div>
-
-
-							</div>
-						</div>
-
-
-						<div class="row">
-							
-							<div class="col-xs-12  col-sm-12  col-md-6">
-								<div class="card card-with-opacity-full card-with-no-border">
-									<%= image_tag "portfolio-thumbnail-11.3.jpg",class: "img-responsive card-img-top img-rounded-corners centered-image" , alt:"Card image cap" %>
-								</div>
-
-							</div>
-							<div class="col-xs-12  col-sm-12  col-md-6">
-
-								<div class="card-container auto-height manual-flipped-car">
-									<div class="card auto-height">
-										<div class="front auto-height no-background-card">
-											<div class="cover auto-height">
-												<%= image_tag "jacks-beers-front-4.jpg",class: "img-rounded-corners" , alt:"Card image cap" %>
-											</div>
-										</div> <!-- end front panel -->
-										<div class="back auto-height">
-
-											<div class="header auto-height">
-												<h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
-											</div> 
-											<div class="content auto-height">
-												<div class="main auto-height">
-													<button type="button" class="btn btn-danger btn-lg fa fa-sign-in" >Comprar</button>
-												</div>
-											</div>
-											<div class="footer auto-height">
-												<div class="social-links text-center">
-													<a href="http://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
-													<a href="http://creative-tim.com" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
-													<a href="http://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
-												</div>
-											</div>
-										</div> <!-- end back panel -->
-									</div> <!-- end card -->
-								</div> <!-- end card-container -->
-
-
-								
-
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="col-md-3 full-screen-container-fluid  min-padding">
+				<%= image_tag "portfolio-thumbnail-11.3.jpg",class: "img-responsive   centered-image" , alt:"Card image cap" %>
+			</div>
+			<div class="col-md-3 full-screen-container-fluid  min-padding">
+				<%= image_tag "portfolio-thumbnail-11.3.jpg",class: "img-responsive   centered-image" , alt:"Card image cap" %>
+			</div>
+			<div class="col-md-3 full-screen-container-fluid  min-padding ">
+				<%= image_tag "portfolio-thumbnail-11.3.jpg",class: "img-responsive   centered-image" , alt:"Card image cap" %>
+			</div>
+			<div class="col-md-3 full-screen-container-fluid min-padding ">
+				<%= image_tag "portfolio-thumbnail-11.3.jpg",class: "img-responsive   centered-image" , alt:"Card image cap" %>
+			</div>
+		</div>
+		<div class="row full-screen-container-fluid  ">
+			<div class="col-md-3 full-screen-container-fluid  min-padding">
+				<%= image_tag "portfolio-thumbnail-11.3.jpg",class: "img-responsive   centered-image" , alt:"Card image cap" %>
+			</div>
+			<div class="col-md-3 full-screen-container-fluid  min-padding">
+				<%= image_tag "portfolio-thumbnail-11.3.jpg",class: "img-responsive   centered-image" , alt:"Card image cap" %>
+			</div>
+			<div class="col-md-3 full-screen-container-fluid  min-padding">
+				<%= image_tag "portfolio-thumbnail-11.3.jpg",class: "img-responsive   centered-image" , alt:"Card image cap" %>
+			</div>
+			<div class="col-md-3 full-screen-container-fluid  min-padding">
+				<%= image_tag "portfolio-thumbnail-11.3.jpg",class: "img-responsive   centered-image" , alt:"Card image cap" %>
 			</div>
 		</div>
 	</div>
