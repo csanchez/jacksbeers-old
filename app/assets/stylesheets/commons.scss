@@ -23,7 +23,9 @@
 .piecesOfEight-price{
    font-size: 30px;
 }
-
+.piecesOfEight-xxs{
+  font-size: 15px;
+}
 .piecesOfEight-xs{
   font-size: 20px;
 }
@@ -47,8 +49,7 @@
 
 .full-screen-container-fluid {
     
-    height: 100%;
-    //margin: 0;
+     height: 100%;
      min-height: 100%; 
 }
 
@@ -116,12 +117,10 @@ section {
 }
 
 .content-section{
-  
+   padding-bottom: 20px !important;
 }
 
 #section-footer{
-
-    
     width: 100%;
      height: 10%;
    
@@ -158,13 +157,7 @@ section {
 
 
 
-@media (max-width: 768px ) { 
-  .content-section{
-  background-color: red;
-  height: auto;
-  min-height: auto;
-  }
-} 
+
 
 .panel {
   background-color: none !important;
@@ -179,11 +172,10 @@ section {
 
 
 .section-separator{
-  height: 350px;
+  height: 250px;
   text-align: center;
 }
-.section-separator-1{
-  //background-color: #5B6073;//#00416A;
+.section-separator{
   background:  url(image-path("wood-texture-1.jpg")) repeat-x  ; 
 }
 .section-separator .message{
@@ -324,3 +316,41 @@ height: 100%;
 }
 
 
+
+@media (max-width: 1000px ) { 
+  .content-section{
+    //background-color: red;
+    background: rgb(84,84,84); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(84,84,84,1) 0%, rgba(140,136,136,1) 25%, rgba(188,184,184,1) 54%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(84,84,84,1) 0%,rgba(140,136,136,1) 25%,rgba(188,184,184,1) 54%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(84,84,84,1) 0%,rgba(140,136,136,1) 25%,rgba(188,184,184,1) 54%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#545454', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    height: auto;
+    min-height: auto;
+  }
+
+ 
+} 
+
+@media (max-width: 500px ) { 
+    .section-separator{
+      //background: none ;
+      //background-color: #7B5353;
+    }
+
+    .piecesOfEight-big{
+      font-size: 40px;
+    }
+    .piecesOfEight-md{
+      font-size: 20px;
+    }
+  .piecesOfEight-xbig{
+    font-size: 60px;
+  }
+  .piecesOfEight-sm{
+    font-size: 20px;
+  }
+  .piecesOfEight-price{
+     font-size: 30px;
+  }
+} 
