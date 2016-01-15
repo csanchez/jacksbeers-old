@@ -50,3 +50,4 @@ gem 'pg', group: :production
 
 #gem 'owlcarousel-rails'
 gem 'shoppe', '~> 1.0'
+

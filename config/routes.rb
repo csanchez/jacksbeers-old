@@ -8,6 +8,12 @@ Rails.application.routes.draw do
   get "beers/index" 
   get "beers"  , to: "beers#index" , as: "beers"
 
+  post "beer/:permalink", to: "beers#buy"
+  delete "beer/:permalink", to: "beers#remove"
+  
+  get "basket", to: "orders#show"
+  delete "basket", to: "orders#destroy"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -46,7 +46,9 @@
 .piecesOfEight-center{
   text-align: center;
 }
-
+.piecesOfEight-left{
+  text-align: left;
+}
 .full-screen-container-fluid {
     
      height: 100%;
@@ -90,9 +92,11 @@ body {
 
 .border-red{
     border: 1px solid red;  
-
-    
+  
 } 
+.background-red{
+    background-color: red;  
+}
 
 .border-yellow{
     border: 1px solid yellow;  
@@ -116,8 +120,16 @@ section {
   
 }
 
-.content-section{
+.content-section:before{
    padding-bottom: 20px !important;
+    background: rgb(84,84,84); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(84,84,84,1) 0%, rgba(140,136,136,1) 25%, rgba(188,184,184,1) 54%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(84,84,84,1) 0%,rgba(140,136,136,1) 25%,rgba(188,184,184,1) 54%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(84,84,84,1) 0%,rgba(140,136,136,1) 25%,rgba(188,184,184,1) 54%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#545454', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    
+  
+
 }
 
 #section-footer{
@@ -126,6 +138,11 @@ section {
    
 }
 
+.half-row{
+  //border: 1px solid red;
+  //height: 50%;
+  //padding-top: 15%;
+}
 
 .background-dark{
   //background-color: #474847;
@@ -178,6 +195,10 @@ section {
 .section-separator{
   background:  url(image-path("wood-texture-1.jpg")) repeat-x  ; 
 }
+
+#bottom-separator{
+ background:  url(image-path("ship-bottom.png")) repeat-x  ;  
+}
 .section-separator .message{
 height: 100%;
 
@@ -187,9 +208,9 @@ height: 100%;
 /** cards **/
 
 .card {
-    //background-color: #000;
+    background-color: rgba(71, 72, 71, 0.5);
     //border: 1px solid silver;
-    //border-radius: 0.25rem;
+    border-radius: 10px;
     display: block;
     margin-bottom: 0.75rem;
     position: relative;
@@ -319,7 +340,6 @@ height: 100%;
 
 @media (max-width: 1000px ) { 
   .content-section{
-    //background-color: red;
     background: rgb(84,84,84); /* Old browsers */
     background: -moz-linear-gradient(-45deg, rgba(84,84,84,1) 0%, rgba(140,136,136,1) 25%, rgba(188,184,184,1) 54%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(-45deg, rgba(84,84,84,1) 0%,rgba(140,136,136,1) 25%,rgba(188,184,184,1) 54%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -334,8 +354,7 @@ height: 100%;
 
 @media (max-width: 500px ) { 
     .section-separator{
-      //background: none ;
-      //background-color: #7B5353;
+      
     }
 
     .piecesOfEight-big{
@@ -354,3 +373,48 @@ height: 100%;
      font-size: 30px;
   }
 } 
+
+
+
+#nav-affix {
+    position: fixed;
+    top: 0;
+    border: 1px solid black;
+    width: 50%;
+    z-index:20;
+}
+
+
+/*footer */
+
+.footer-distributed {
+    //background-color: #292c2f;
+
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    
+    margin-top: 80px;
+    padding: 55px 50px;
+    text-align: left;
+    width: 100%;
+
+    background:  url(image-path("footer.png"))  no-repeat ; 
+    height: 500px;
+  //-webkit-background-size: cover;
+  //  -moz-background-size: cover;
+  //  -o-background-size: cover;
+  //  background-size: cover;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footer-left {
+    width: 40%;
+}
+
+
+
+

@@ -1,0 +1,9 @@
+<% if current_order %>
+      <div class="alert alert-success piecesOfEight  piecesOfEight-space piecesOfEight-black piecesOfEight-xs" role="alert">
+        Tienes <%= pluralize current_order.total_items, 'productos'%> en tu compra. Total: <%= number_to_currency current_order.total_before_tax %>. 
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+<h2>Your basket</h2>
+<%= render 'items', :order => current_order %>
+<p><%= button_to 'Empty basket', basket_path, :method => :delete %></p>

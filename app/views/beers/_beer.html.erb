@@ -1,0 +1,29 @@
+<div class="piecesOfEight-center piecesOfEight  piecesOfEight-space piecesOfEight-black " id= <%= beer.permalink %> >
+	<div class="beer-title"> <%= beer.name %> <span class="badge"><%= total.to_i %></span></div>
+	<div class="beer-subtitle "> <%= beer.short_description %></div>
+	<div class="image-container beer-image-container"  >
+		<%= image_tag "beer-1.png", alt:"Card image cap", class:"img-responsive" %>
+	</div>
+	<div class="">
+		<p class="piecesOfEight-black"> 
+			<%= number_to_currency beer.price %>
+		</p>
+		<p>
+      <%- if total.to_i > 0%>
+        <%= button_tag(class: "btn btn-warning btn-sm piecesOfEight-black btn-remove ", "data-permalink" => beer.permalink , "data-authenticity_token" =>  form_authenticity_token )  do %>
+            <i class="fa fa-minus-circle "></i>  
+        <% end %>
+      <% else %>
+      <%= button_tag(class: "btn btn-warning btn-sm piecesOfEight-black btn-remove no-visible-button", "data-permalink" => beer.permalink , "data-authenticity_token" =>  form_authenticity_token )  do %>
+            <i class="fa fa-minus-circle "></i>  
+        <% end %>
+      <% end %>
+
+      <%= button_tag(class: "btn btn-warning btn-sm piecesOfEight-black btn-buy", "data-permalink" => beer.permalink , "data-authenticity_token" =>  form_authenticity_token )  do %>
+          <i class="fa fa-plus-circle "></i> 
+        <% end %>
+			
+		</p>
+
+	</div>
+</div>

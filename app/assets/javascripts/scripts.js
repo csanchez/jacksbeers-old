@@ -2,30 +2,43 @@ $( document ).ready(function() {
 
 
 	var scrollVelocity=4500;
-
-  if(window.innerWidth >=1200){
-    $("#presentation-image").html("<img class='img-responsive centered-image' src='/assets/pergamino-lg.png' alt='Card image cap' style='width: 100%; '>")
+/*
+  if(window.innerWidth >=1500){
+    alert("extrabig");
+    $("#presentation-image").append("<img class='img-responsive centered-image' src='/assets/pergamino-xlg.png' alt='Card image cap' style='width: 100%; '>");
   }else{
-    if(window.innerWidth > 768 && window.innerWidth < 1200 ){
-      $("#presentation-image").html("<img class='img-responsive centered-image' src='/assets/pergamino-md.png' alt='Card image cap' startwidth='957' style='width: 100%; '>")
+    if(window.innerWidth > 1200 && window.innerWidth < 1500 ){
+      $("#presentation-image").append("<img class='img-responsive centered-image' src='/assets/pergamino-lg.png' alt='Card image cap' style='height: 50%; '>");
     }else{
-      $("#presentation-image").html("<img class='img-responsive centered-image' src='/assets/pergamino-xs.png' alt='Card image cap' style='width: 100%; '>")   
+      if(window.innerWidth > 768 && window.innerWidth < 1200 ){
+        $("#presentation-image").append("<img class='img-responsive centered-image' src='/assets/pergamino-md.png' alt='Card image cap' style='width: 100%; '>");
+      }else{
+        $("#presentation-image").append("<img class='img-responsive centered-image' src='/assets/pergamino-xs.png' alt='Card image cap' style='width: 100%; '>");   
+      }
     }
     
   }
 
   $( window ).resize(function() {
-    if(window.innerWidth >=1200){
-      $("#presentation-image").html("<img class='img-responsive centered-image' src='/assets/pergamino-lg.png' alt='Card image cap' style='width: 100%; '>")
+    if(window.innerWidth >=1500){
+      $("#presentation-image").html("");
+      $("#presentation-image").append("<img class='img-responsive centered-image' src='/assets/pergamino-xlg.png' alt='Card image cap' style='width: 100%; '>")
     }else{
-      if(window.innerWidth > 768 && window.innerWidth < 1200 ){
-        $("#presentation-image").html("<img class='img-responsive centered-image' src='/assets/pergamino-md.png' alt='Card image cap' style='width: 100%; '>")
+      if(window.innerWidth > 1200 && window.innerWidth < 1500 ){
+        $("#presentation-image").html("");
+        $("#presentation-image").append("<img class='img-responsive centered-image' src='/assets/pergamino-lg.png' alt='Card image cap' style='width: 100%; '>");
       }else{
-        $("#presentation-image").html("<img class='img-responsive centered-image' src='/assets/pergamino-xs.png' alt='Card image cap' style='width: 100%; '>")   
+        if(window.innerWidth > 768 && window.innerWidth < 1200 ){
+          $("#presentation-image").append("<img class='img-responsive centered-image' src='/assets/pergamino-md.png' alt='Card image cap' style='width: 100%; '>");
+        }else{
+          $("#presentation-image").append("<img class='img-responsive centered-image' src='/assets/pergamino-xs.png' alt='Card image cap' style='width: 100%; '>");   
+        }
       }
       
     }
   });
+
+*/
 	
 	$("#services-jump").click(function() {
 	    $('html, body').animate({
@@ -87,22 +100,48 @@ $( document ).ready(function() {
   });
 
 
-  /** flip cards**/
-  $(".manual-flipped-car").click(function(){
-  	console.log($(this))
-  	
-  	if( $(this).hasClass('hover') ){
-            $(this).removeClass('hover');
-        } else {
-            $(this).addClass('hover');
-        }
-
-  });
+  
   $("#card-flip").flip();
 
-   $('.image-container').imagefit();
+ // $('#nav-affix').affix({});
+ var offset = 300;
+    var duration = 200;
+    $(".content-collumn").scroll(function() {
+      
+        if ($(".content-collumn").scrollTop() > offset) {
+            $('.back-to-top').fadeIn(duration);
+        } else {
+            $('.back-to-top').fadeOut(duration);
+        }
+    });
+    
+    $('.back-to-top').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
 
-
+    
 });
 
+
+
+
+function showBackButton(){
+    var offset = 220;
+    var duration = 500;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+    });
+    
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+}
 
