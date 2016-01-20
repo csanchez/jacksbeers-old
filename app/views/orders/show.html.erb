@@ -7,3 +7,4 @@
 <h2>Your basket</h2>
 <%= render 'items', :order => current_order %>
 <p><%= button_to 'Empty basket', basket_path, :method => :delete %></p>
+<%= link_to "Checkout", checkout_path %>
