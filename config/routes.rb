@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+  
+
   mount Shoppe::Engine => "/shoppe"
+  
   get 'home/index'
   root 'home#index'
 
   get "beer/:permalink", to: "beers#show", as: "beer"
   post "beer/:permalink", to: "beers#buy", as: "buy_beer"
+  
   get "beers/index" 
   get "beers"  , to: "beers#index" , as: "beers"
 
@@ -17,6 +21,15 @@ Rails.application.routes.draw do
   match "checkout", to: "orders#checkout", as: "checkout", via: [:get, :patch]
   match "checkout/pay", to: "orders#payment", as: "checkout_payment", via: [:get, :post]
   match "checkout/confirm", to: "orders#confirmation", as: "checkout_confirmation", via: [:get, :post]
+  get "checkout/paypal", to: "orders#paypal"
+
+
+  resources :users, only: [:new, :create]
+  get '/sign_up', to: 'users#new', as: :sign_up
+
+  resources :sessions, only: [:new, :create, :destroy]
+  get '/log_in', to: 'sessions#new', as: :log_in
+  delete '/log_out', to: 'sessions#destroy', as: :log_out
 
 
   # The priority is based upon order of creation: first created -> highest priority.

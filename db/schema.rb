@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151231002454) do
+ActiveRecord::Schema.define(version: 20160123180444) do
 
   create_table "nifty_key_value_store", force: :cascade do |t|
     t.integer "parent_id"
@@ -311,12 +311,12 @@ ActiveRecord::Schema.define(version: 20151231002454) do
   create_table "shoppe_users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "email_address"
-    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email",            default: "", null: false
+    t.string   "crypted_password"
+    t.string   "salt"
+    t.string   "nickname",         default: "", null: false
   end
-
-  add_index "shoppe_users", ["email_address"], name: "index_shoppe_users_on_email_address"
 
 end

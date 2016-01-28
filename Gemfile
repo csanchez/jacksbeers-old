@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.2'
+gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
 
 # Use SCSS for stylesheets
@@ -42,6 +42,7 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'faker'
 end
 
 gem 'rails_12factor', group: :production
@@ -50,4 +51,7 @@ gem 'pg', group: :production
 
 #gem 'owlcarousel-rails'
 gem 'shoppe', '~> 1.0'
+#gem "shoppe-paypal"
+gem "sorcery"
+gem 'validates_email_format_of'
 

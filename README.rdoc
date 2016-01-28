@@ -26,30 +26,64 @@ Things you may want to cover:
 RAILS_ENV=production bundle exec rake assets:precompile
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+res=PayPal::SDK.configure({
+  :mode => "sandbox",
+  :client_id => "Ad88ZYy8U6h7FfSgRZkWKo_NnAp4-v0tZqBinA6duyHtVUiVaEnTZyRs8JPUeCY7FqnuXPtL1aLyinoV",
+  :client_secret => "ECRDejs8ZagWW9EqMOAAQXN4dysf1sWtr5AKW-w2tO_HwkC3_u7KBp9jV9TUX8c3N7-MIWULU5cLIkx-"
+})
+
+@payment = PayPal::SDK::REST::Payment.new({
+  :intent => "sale",
+  :payer => {
+    :payment_method => "paypal" },
+  :redirect_urls => {
+    :return_url => "localhost:3000/paypal_sucess?success=true",
+    :cancel_url => "localhost:3000/paypal_cancel?cancel=true" },
+  :transactions => [ {
+    :amount => {
+      :total => "12",
+      :currency => "USD" },
+    :description => "creating a payment" } ] } )
 
 
-<%= render partial: "home" %>
-<%= render partial: "separator" , locals:{message:"Jack's Beers, que la cerveza vaya a ti!!! "}%>
-<%= render partial: "features" %>
-<%= render partial: "separator" , locals:{message:"Jack's Beers, que la cerveza vaya a ti!!! "}%>
-<%= render partial: "services" %>
-<%= render partial: "separator" , locals:{message:"Sed y flojera?, Jack's Beers !!! "}%>
-<%= render partial: "contact" %>
+ res3 = @payment.create
+  @payment.links.find{|v| v.method == "REDIRECT" }.href
 
-<!-- header 1-->
-	<%= render partial: "nav_bar" %>
-	<!-- header 1-->
-	<!-- Content -->
-	<%= yield %>
-	<!-- Content -->
-	<!-- footer -->
 
- <span class="counter ng-binding">0</span>
+  onsuccess => http://localhost:3000/paypal_sucess?success=true&paymentId=PAY-2KG61919F3717264PK2QPY7Y&token=EC-4KE889718H746513Y&PayerID=5K8QFXSLHVNB4
+
+  @payment2 = PayPal::SDK::REST::Payment.new({:payment_id => "PAY-2KG61919F3717264PK2QPY7Y"})
+
+res4=@payment.execute( :payer_id => "5K8QFXSLHVNB4" )
 
 
 
-      <%= button_tag(class: "btn btn-warning btn-sm piecesOfEight-black btn-buy", "data-permalink" => beer.permalink , "data-authenticity_token" =>  form_authenticity_token ,:remote => true )  do %>
-          <i class="fa fa-plus-circle "></i>  Comprar
-        <% end %>
+
+
+
+
+
+<h1>Registration</h1>
+
+<%= form_for @user do |f| %>
+  <%= render 'shared/errors', object: @user %>
+  <div class="form-group">
+    <%= f.label "Nombre de usuario" %>
+    <%= f.text_field :nickname, class: 'form-control', required: true %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.email_field :email, class: 'form-control', required: true %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control', required: true %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, class: 'form-control', required: true %>
+  </div>
+  <%= f.submit 'Register', class: 'btn btn-primary btn-lg' %>
+<% end %>

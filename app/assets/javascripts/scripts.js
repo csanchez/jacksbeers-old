@@ -99,7 +99,24 @@ $( document ).ready(function() {
  
   });
 
+  if($(".notice").text()!=""){
+    $.notify(
+  {
+    icon: 'glyphicon glyphicon-star',
+    message: $(".notice").text(),
+  },{
+    // settings
+    element: 'body',
+    animate: {
+      enter: 'animated fadeInDown',
+      exit:  'animated fadeOutUp'
+    },
+     delay: 2000}
+  );
+  }
+  
 
+/*
   
   $("#card-flip").flip();
 
@@ -119,7 +136,7 @@ $( document ).ready(function() {
         event.preventDefault();
         $('html, body').animate({scrollTop: 0}, duration);
         return false;
-    })
+    })*/
 
     
 });

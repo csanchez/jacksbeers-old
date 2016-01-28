@@ -5,9 +5,12 @@
       <div class="alert alert-success piecesOfEight  piecesOfEight-space piecesOfEight-black piecesOfEight-xs" role="alert">
         Tienes <span id="counter"><%=  current_order.total_items %></span> productos en tu compra. Total $ 
         <span id="counter2"><%= current_order.total_before_tax %> </span>
-        
-        
       </div>
+
+      <div class=" notice piecesOfEight  piecesOfEight-space piecesOfEight-black piecesOfEight-xs" style="visibility:hidden;">
+       <%=  flash[:notice] %>
+     </div>
+    
     <% end %>
     <% if  flash[:notice] %>
     <div class="alert alert-warning alert-dismissible" role="alert">
@@ -19,7 +22,7 @@
     <% @beers.in_groups_of(4, false).each do |group| %>
     <div class='row'>
       <% group.each do |beer| %>
-      <div class='col-xs-6 col-sm-4 col-md-3 full-screen-container-fluid '>
+      <div class='col-xs-6   col-sm-4 col-md-3 full-screen-container-fluid '>
         <div class="container-fluid full-screen-container-fluid ">
           <%= render partial: "beer", locals:{beer: beer , total: @badges[beer.permalink.to_sym]}%>
         </div>
